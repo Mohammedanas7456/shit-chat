@@ -137,13 +137,7 @@ app.post("/signIn", async (req, res) => {
     }
 
     if (await bcrypt.compare(req.body.password, user.password)) {
-      const accessToken = jwt.sign(
-        { name: user.name },
-        process.env.ACCESS_TOKEN_SECRET
-      );
-      await tokenDataBase.create({ token: accessToken, name: user.name });
-      console.log("access token", accessToken);
-      res.json({ accessToken: accessToken });
+      res.json({ login: "success" });
     } else {
       console.log("not allowed", req.body.password);
       res.json({ accessToken: null });
