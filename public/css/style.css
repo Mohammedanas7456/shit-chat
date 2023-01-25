@@ -29,15 +29,6 @@ a {
 	text-decoration: none;
 }
 
-.btn {
-	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border: 0;
-	font-size: 17px;
-}
-
 /* Chat Page */
 
 .chat-container {
@@ -187,3 +178,51 @@ a {
 		display: none;
 	}
 }
+#sign-in{
+	text-align: center;
+	
+}
+.clr{
+	color: #30e78e;
+	font-size: large;
+	text-decoration: solid;
+
+}
+h1{
+	text-align: center;
+}
+img:hover{
+	cursor: pointer;
+}
+
+.photo-container {
+	position: relative;
+}
+  
+.tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: rgb(35, 64, 123);
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	border-radius: 6px;
+	padding: 5px 0;
+	
+	/* Position the tooltip */
+	
+	z-index: 1;
+	top: 50%;
+	left: -50%;
+	opacity: 0;
+  transition: opacity 1s;
+}
+
+  
+
+  div.photo-container:hover .tooltiptext{
+	visibility: visible;
+	opacity: 1;
+  }
+  
+

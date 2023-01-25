@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ChatCord App</title>
+  </head>
+  <body style="text-align: center">
+    <div class="join-container">
+      <header class="join-header">
+        <h1><i class="fas fa-smile"></i> ShitChat</h1>
+      </header>
+      <div style="display: flex; justify-content: center" class="join-main">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="button"
+          style="margin-right: 5px"
+        >
+          Public Rooms
+        </button>
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="private-button"
+          style="margin-right: 5px"
+        >
+          Private Room
+        </button>
+        <button type="button" class="btn btn-dark" id="myRooms-button">
+          My Rooms
+        </button>
+      </div>
+      <div style="background: var(--dark-color-b)">
+        <img
+          id="back"
+          style="width: 40px; height: 60px; object-fit: contain"
+          src="./assets/images/Go-back-icon.png"
+        />
+      </div>
+      <main class="join-main">
+        <div id="room" style="display: none">
+          <form id="public-chat-form">
+            <div class="form-control">
+              <label for="room">Room</label>
+              <select name="room" id="room">
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Java">Java</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-dark">Join Room</button>
+          </form>
+        </div>
+        <div id="private-room" style="display: none">
+          <h2 style="text-align: center">JOIN ROOM</h2>
+          <form id="enter-code-form">
+            <label for="code"> Enter the code</label>
+            <input
+              type="text"
+              name="code"
+              id="code"
+              placeholder="####-####-####"
+              required
+            />
+          </form>
+          <div id="invalidCode" class="btn btn-danger" style="display: none">
+            Code is not valid
+          </div>
+          <h1 style="text-align: center; margin-top: 15px">OR</h1>
+          <button type="button" class="btn btn-dark" id="create-room">
+            Create Room
+          </button>
+        </div>
+        <div id="create-room-div" style="display: none">
+          <form id="create-room-form">
+            <label for="roomName"> Enter Room Name</label>
+            <input
+              type="text"
+              name="roomName"
+              id="roomName"
+              placeholder="room-name"
+              required
+            />
+            <button type="submit" class="btn btn-dark" id="generate-code">
+              generate Code
+            </button>
+          </form>
+        </div>
+        <div id="created" style="display: none">
+          room has been created successfully
+        </div>
+        <div id="generated-code-div" style="display: none"></div>
+        <button id="go-to-room" class="btn btn-dark" style="display: none">
+          Go To Room
+        </button>
+      </main>
+    </div>
+    <script src="js/room.js"></script>
+  </body>
+</html>
