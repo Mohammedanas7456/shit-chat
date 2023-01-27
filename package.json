@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "peer": "peerjs --port 3002",
+    "peer": "peerjs --port 3001",
     "start": "concurrently --kill-others \"npm run peer\" \"npm run dev\""
   },
   "author": "anas",

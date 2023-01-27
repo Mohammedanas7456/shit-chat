@@ -17,7 +17,7 @@ if (callType === "video") {
 console.log("flag: ", flag);
 const myPeer = new Peer(undefined, {
   host: "/",
-  port: "3002",
+  port: "3001",
 });
 const myVideo = document.createElement("video");
 myVideo.style = "border-radius: 50%";
